@@ -10,7 +10,8 @@ defmodule FamilyMovieNight.Application do
     children = [
       FamilyMovieNightWeb.Telemetry,
       FamilyMovieNight.Repo,
-      {DNSCluster, query: Application.get_env(:family_movie_night, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:family_movie_night, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: FamilyMovieNight.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: FamilyMovieNight.Finch},

@@ -2,7 +2,9 @@ defmodule FamilyMovieNightWeb.ErrorJSONTest do
   use FamilyMovieNightWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert FamilyMovieNightWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert FamilyMovieNightWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do
