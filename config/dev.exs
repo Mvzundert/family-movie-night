@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :family_movie_night, FamilyMovieNight.Repo,
-  username: "root",
-  password: "root",
+  username: "postgres",
+  password: "postgres",
   hostname: "localhost",
   database: "family_movie_night_dev",
   stacktrace: true,
